@@ -50,7 +50,7 @@ public class Exame {
         // écrire dans le fichier
         int Random = Min + (int) (Math.random() * (Max - Min + 1));
 
-        for (int Random : Somme);
+       
 
         try (BufferedWriter Value = new BufferedWriter(new FileWriter("question1.txt"))) {
 
