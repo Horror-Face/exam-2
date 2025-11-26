@@ -4,16 +4,16 @@
 
 package Pratique;
 
+
+// import
 import java.util.Scanner;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Arrays;
+import java.io.*;
 
 public class Exame {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        FileWriter writer = new FileWriter("question1.txt");
+        PrintWriter writer = new PrintWriter("question1.txt");
         boolean valid = false;
         int Min;
         int Max;
@@ -49,12 +49,19 @@ public class Exame {
 
         // écrire dans le fichier
         int Random = Min + (int) (Math.random() * (Max - Min + 1));
-        Somme[0 - 9] = Random;
+
+        for (int Random : Somme);
+
         try (BufferedWriter Value = new BufferedWriter(new FileWriter("question1.txt"))) {
-            Value.write("Faut que je mette le tableau ici");
+
+            writer.printf("Tableau", Somme);
+
         } catch (IOException e) {
+
             System.out.println("Erreur lors de l'écriture dans le fichier : " + e.getMessage());
         }
+        System.out.print(Somme); 
+        // [I@532760d8 -> résultat en se moment, a réglé
         sc.close();
     }
 }
